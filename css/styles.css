@@ -19,7 +19,6 @@ body {
 .site-container {
     margin: 4px auto 0;
     background-color: var(--color-primary);
-    border-radius: 30px 30px 0 0;
     overflow: hidden;
 }
 
@@ -28,24 +27,25 @@ body {
 ========================= */
 header {
     height: 89px;
-    background-color: var(--color-card-bg) ;
-
+    background-color:rgba(255, 204, 201, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 0 28px 0 20px;
 
-    border-bottom: 2px solid #77727e;
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.25);
 }
 
 
 /* Logo */
 
 .logo {
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    color: #292a35;
+    font-family: "bebas neue", serif;
+    font-size: 40px;
+    color: var(--color-primary-dark);
 }
 
 
@@ -59,10 +59,11 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #292a35;
-    font-size: 14px;
+    color: var(--color-card-bg);
+    font-family: instrument serif;
+    font-size: 25px;
+    word-spacing: 20px; 
 }
-
 
 /* =========================
    HERO
@@ -78,7 +79,7 @@ nav a {
 
     padding: 84px 40px 82px 20px;
 
-    background-color: #c5c1cc;
+    background-color: var(--color-primary);
 }
 
 
@@ -88,35 +89,32 @@ nav a {
 
 .hero-content {
     padding-right: 40px;
+    padding-left: 80px;
 }
 
 .hero-content h1 {
-    font-family: "Playfair Display", serif;
-
+    font-family: "Bebas Neue", serif;
     font-size: clamp(55px, 5vw, 78px);
-
     font-weight: 400;
-
+    font-style: normal;
     line-height: 1.05;
-
     letter-spacing: -2px;
-
     margin-bottom: 27px;
-
-    color: #171a29;
+    color: #ddc8c4;
 }
 
 
 .hero-content p {
     max-width: 510px;
 
-    font-family: "Playfair Display", serif;
+    font-family: "Instrument Serif", serif;
 
     font-size: 25px;
+    font-style: serif;
 
     line-height: 1.25;
 
-    color: #292a35;
+    color: var(--color-text);
 
     margin-bottom: 44px;
 }
@@ -127,25 +125,19 @@ nav a {
 ========================= */
 
 .work-btn {
-    display: flex;
-
-    width: 323px;
-    height: 61px;
-
-    align-items: center;
-    justify-content: space-around;
-
-    background-color: #efb3b1;
+    width:15rem;
+    height: 2.5rem;
+    background-color: var(--color-card-bg);
 
     border: 1px solid #555864;
 
-    border-radius: 40px;
+    border-radius: 8px;
 
-    color: #292a35;
+    color: var(--color-text);
 
     text-decoration: none;
-
-    font-size: 14px;
+    font-family: instrument serif;
+    font-size: 25px;
     font-weight: 500;
 
     transition: all 0.3s ease;
@@ -153,7 +145,9 @@ nav a {
 
 .work-btn:hover {
     transform: translateY(-2px);
-    background-color: #e8a5a3;
+    background-color: var(--color-text);
+    cursor: pointer;
+    color:var(--color-primary-dark)
 }
 
 
@@ -163,14 +157,13 @@ nav a {
 
 .hero-image {
     width: 100%;
-    max-width: 465px;
-    height: 484px;
+    height: 700px;
 
-    justify-self: end;
+    justify-self: center;
 
     overflow: hidden;
 
-    border-radius: 100px;
+    border-radius: 50px;
 }
 
 
@@ -181,6 +174,7 @@ nav a {
     display: block;
 
     object-fit: cover;
+    object-position: center top;
 }
 
 
@@ -306,9 +300,9 @@ h3{
     
 }
 
-img:hover {
+/* img:hover {
     transform:scale(1.2);
-}
+} */
 
 a:hover {
     color: #E0115F;
@@ -320,7 +314,7 @@ a{
    font-family: helvetica ;
    font-size: 20px;
    color: var(--color-text);
-   word-spacing: 20px; 
+  
 }
 
 ul {
@@ -332,4 +326,19 @@ li {
   padding: .5rem;
   
 }
+.contact-btn {
+ width:10rem;
+    height: 2.5rem;
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 5px;
+    color: var(--color-text);
 
+    text-decoration: none;
+    font-family: instrument serif;
+    font-size: 25px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
