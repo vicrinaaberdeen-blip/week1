@@ -26,6 +26,10 @@ body {
    HEADER
 ========================= */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 89px;
     background-color:rgba(255, 204, 201, 0.55);
     backdrop-filter: blur(20px);
@@ -33,8 +37,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 28px 0 20px;
+    z-index: 100;
+    padding: 0 3vw;
 
     border-bottom: 1px solid  rgba(255, 255, 255, 0.25);
 }
@@ -43,8 +47,9 @@ header {
 /* Logo */
 
 .logo {
-    font-family: "bebas neue", serif;
+    font-family: "bebas neue", sans-serif;
     font-size: 40px;
+    font-weight: 500;
     color: var(--color-primary-dark);
 }
 
@@ -272,7 +277,9 @@ h3{
     color:var(--color-text);
 }
 .card {
-    border: 1px solid #4c2719;
+    border: 10px solid #4c2719;
+    justify-content: space-between;
+    padding-right: 10px;
 }
 }
 .box {
@@ -283,24 +290,30 @@ h3{
     border: solid 5px purple;
     margin: 40px;
 }
+/* PROJECTS GRID */
+*{
+    box-sizing: border-box;
+}
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,minmax(0,1fr));
     background-color: #ddc8c4;
-    width: 1080px ;
-    
-   
+    width: 100vw ;
+    padding: 40px;
+    column-gap: 20px;
+    row-gap: 32px;
 }
-
 .card img {
+    display: flex;
     width: 100%;
-    height: 300px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     transition: transform 0.2s ease;
+    border-radius: 50px;
     
 }
 
-/* img:hover {
+img:hover {
     transform:scale(1.2);
 } */
 
@@ -342,3 +355,422 @@ li {
 
     transition: all 0.3s ease;
 }
+/* =========================
+   PROJECT HERO
+========================= */
+.projects-hero {
+  width: 100%;
+}
+
+.projects-hero-image {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+.projects-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  background-size: cover;
+  background-position: center;
+}
+/* Burgundy section underneath */
+
+.projects-intro {
+  position: relative;
+
+  min-height: 450px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 140px 30px 80px;
+
+  background: var(--burgundy);
+}
+
+
+/* HUGE PROJECTS TEXT */
+
+.projects-intro h1 {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  margin: 0;
+
+  color: var(--color-text);
+
+  text-align: center;
+  white-space: nowrap;
+
+  font-family: "Bebas neue", sans-serif;
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 900;
+
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+
+/* Intro paragraph */
+
+.intro-copy {
+  text-align: center;
+}
+
+.intro-copy p {
+  font-family: "Instrument Serif",sans-serif;
+
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.intro-copy em {
+  font-family: instrument serif, serif;
+  font-style: italic;
+  font-size: 1.25em;
+  font-weight: 400;
+  text-transform: none;
+}
+/* =========================
+   ABOUT HERO
+========================= */
+.about-hero {
+  width: 100%;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+.about-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+
+  background-size: cover;
+  background-position: center;
+}
+/* Burgundy section underneath */
+
+.about-intro {
+  position: relative;
+
+  min-height: 450px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 140px 30px 80px;
+
+  background: var(--burgundy);
+}
+
+
+/* HUGE ABOUT TEXT */
+
+.about-intro h1 {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  margin: 0;
+
+  color: var(--color-text);
+
+  text-align: center;
+  white-space: nowrap;
+
+  font-family: "Bebas neue", sans-serif;
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 900;
+
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+
+/* About paragraph */
+
+.about-copy {
+  text-align: justify;
+  padding: 150px;
+}
+
+.about-copy p {
+  font: bebas neue;
+
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.1;
+  text-align: justify;
+}
+
+/* =========================
+   CONTACT HERO
+========================= */
+.contact-hero {
+  width: 100%;
+}
+
+.contact-hero-image {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+.contact-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+
+  background-size: cover;
+  background-position: center;
+}
+/* Burgundy section underneath */
+
+.contact-intro {
+  position: relative;
+
+  min-height: 450px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 140px 30px 80px;
+
+  background: var(--burgundy);
+}
+
+
+/* HUGE ABOUT TEXT */
+
+.contact-intro h1 {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  margin: 0;
+
+  color: var(--color-text);
+
+  text-align: center;
+  white-space: nowrap;
+
+  font-family: "Bebas neue", sans-serif;
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 900;
+
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+
+/* Contact paragraph */
+
+.contact-copy {
+  text-align: justify;
+  padding: 150px;
+}
+
+.contact-copy p {
+  font: bebas neue;
+
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.1;
+  text-align: justify;
+}
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form {
+    width: 100%;
+    margin:80px auto 0;
+    display: flex
+    flex-direction: column;
+    align-items: center;
+    gap:55px
+    padding-right: 50px
+}
+.label {
+    font: "bebas neue" sans-serif;
+
+}
+/* -----------------
+   LABELS
+------------------ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label,
+.name-section h3 {
+  margin: 0;
+
+  color: #fff;
+  font-family: Arial, sans-serif;
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-group label span {
+  margin-left: 8px;
+
+  color: #d7a9ba;
+  font-family: Georgia, serif;
+
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: lowercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* -----------------
+   FIRST + LAST NAME
+------------------ */
+
+.name-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+
+/* -----------------
+   INPUTS
+------------------ */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 20px 28px;
+
+  color: #fff;
+  background: transparent;
+
+  border: 2px solid #fff;
+  border-radius: 50px;
+
+  font-family: inherit;
+  font-size: 1.1rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* input height */
+
+.contact-form input {
+  height: 75px;
+  padding: 0 30px;
+}
+
+
+/* textarea */
+
+.contact-form textarea {
+  min-height: 220px;
+
+  border-radius: 45px;
+
+  resize: vertical;
+}
+
+
+/* -----------------
+   FOCUS
+------------------ */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffbad3;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* -----------------
+   BUTTON
+------------------ */
+
+.contact-form button {
+  align-self: flex-start;
+
+  min-width: 210px;
+  margin-top: 25px;
+  padding: 28px 45px;
+  
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #ffbad3;
+  color: #350814;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  background: #ffd0df;
+}
+
