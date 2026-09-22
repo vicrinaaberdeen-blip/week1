@@ -9,12 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-     background-color: #242529;
-    color: #171a29;
-    font-family: "DM Sans", sans-serif;
-}
-
 /*==== MAIN SITE CONTAINER ====*/
 .site-container {
     margin: 4px auto 0;
@@ -67,7 +61,7 @@ nav a {
     color: var(--color-card-bg);
     font-family: instrument serif;
     font-size: 25px;
-    word-spacing: 20px; 
+    word-spacing: 10px; 
 }
 
 /* =========================
@@ -264,20 +258,20 @@ body {
 h1 {
     color: var(--color-text);
     font-size: 100px;
-    font-family: Helvetica;
+    font-family: "bebas neue" sans-serif;
 }
 h2{
   color: var(--color-text);
   font-size:50px;
-  font-family: helvetica;
+  font-family: "bebas neue";
 h1,h2,h3 {
-  font-family: Helvetica;  
+  font-family: "bebas neue" sans-serif;  
 }
 h3{
     color:var(--color-text);
 }
+
 .card {
-    border: 10px solid #4c2719;
     justify-content: space-between;
     padding-right: 10px;
 }
@@ -287,7 +281,7 @@ h3{
     max-width:1000px ;
     background-color: #db5375;
     padding: 20px;
-    border: solid 5px purple;
+   
     margin: 40px;
 }
 /* PROJECTS GRID */
@@ -324,7 +318,7 @@ a:hover {
 }
 a{
    text-decoration: none; 
-   font-family: helvetica ;
+   font-family: "instrument" serif;
    font-size: 20px;
    color: var(--color-text);
   
@@ -417,9 +411,8 @@ li {
   font-family: "Bebas neue", sans-serif;
   font-size: clamp(5rem, 15vw, 14rem);
   font-weight: 900;
-
   line-height: 0.8;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.0em;
 }
 
 
@@ -510,7 +503,7 @@ li {
   font-weight: 900;
 
   line-height: 0.8;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.0em;
 }
 
 
@@ -595,7 +588,7 @@ li {
   font-weight: 900;
 
   line-height: 0.8;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.0em;
 }
 
 
@@ -607,7 +600,7 @@ li {
 }
 
 .contact-copy p {
-  font: bebas neue;
+  font: bebas neue sans-serif;
 
   font-size: clamp(1.1rem, 2vw, 1.8rem);
   font-weight: 400;
@@ -754,10 +747,10 @@ li {
   
 
   border: 0;
-  border-radius: 999px;
+  border-radius: 8px;
 
-  background: #ffbad3;
-  color: #350814;
+  background: var(--color-card-bg);
+  color: var(--color-text);
 
   font-size: 1.2rem;
   font-weight: 500;
@@ -772,5 +765,6 @@ li {
 .contact-form button:hover {
   transform: translateY(-3px);
   background: #ffd0df;
+  color: #260000;
 }
 
